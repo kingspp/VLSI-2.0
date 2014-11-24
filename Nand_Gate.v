@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 //NAND Gate Module
-module ug(a,b, nand_and,nand_or,nand_not,temp,temp2);
+module nand_ug(a,b, nand_and,nand_or,nand_not,temp,temp2);
     input a,b;
     output nand_and,nand_or,nand_not,temp,temp2;	
 	 assign temp=~(a&b);
@@ -34,7 +34,7 @@ endmodule
 module tb();
 	reg ta,tb;
 	wire tnand_and,tnand_or,tnand_not;
-	ug uut(.a(ta),.b(tb),.nand_and(tnand_and),.nand_or(tnand_or),.nand_not(tnand_not));
+	nand_ug uut(.a(ta),.b(tb),.nand_and(tnand_and),.nand_or(tnand_or),.nand_not(tnand_not));
 	initial
 	begin
 		ta=0; tb=0; #10;
@@ -43,4 +43,3 @@ module tb();
 		ta=1; tb=1; #10;
 	end
 endmodule
-	
