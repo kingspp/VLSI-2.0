@@ -13,7 +13,7 @@
 //
 // Dependencies: 
 //
-// Revision: 
+// Revision: 2
 // Revision 0.01 - File Created
 // Additional Comments: 
 //
@@ -36,26 +36,15 @@ module jkff(j,k,clk,q,qb);
 	begin
 		q=1;
 		qb=~q;
-		if(j==0 & k==0)
-		begin
-			q=q;
-			qb=qb;
-		end
-		if(j==0 & k==1)
-		begin
-			q=0;
-			qb=~q;
-		end
-		if(j==1 & k==0)
-		begin
+		if(j==0 & k==0)		
+			q=q;		
+		else if(j==0 & k==1)
+			q=0;		
+		else if(j==1 & k==0)
 			q=1;
-			qb=~q;
-		end
-		if(j==1 & k==1)
-		begin
-			q=~q;
-			qb=~q;
-		end
+		else 		
+			q=~q;					
+		qb=~q;
 	end
 endmodule
 
