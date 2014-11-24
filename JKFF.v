@@ -23,7 +23,9 @@
 module jkff(j,k,clk,q,qb);
 	input j,k,clk;
 	output q,qb;
-	reg q,qb;	
+	reg q,qb;
+	initial q=0;
+	initial qb=~q;
 	always@(posedge clk)	
 	begin	
 		if(j==0 & k==0)		
