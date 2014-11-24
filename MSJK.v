@@ -1,10 +1,10 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 	   Code-Tronix
-// Engineer: 	   Prathyush S.P
+// Company: Code-Tronix
+// Engineer: Prathyush S.P
 // 
 // Create Date:    09:09:31 11/24/2014 
-// Design Name:    MSJK Flipflop (Structural)
+// Design Name: 	 Master Slave JK Flip - Structural Design
 // Module Name:    msjk 
 // Project Name: 
 // Target Devices: 
@@ -18,6 +18,8 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
+
+//MSJK Main module
 module msjk(mj,mk,clk,sj,sk, mq,mqb,sq,sqb);
     input mj,mk,clk,sj,sk;
     output mq,mqb,sq,sqb;
@@ -25,7 +27,7 @@ module msjk(mj,mk,clk,sj,sk, mq,mqb,sq,sqb);
 	 jkff slave(mq,mqb,~clk,sq,sqb);
 endmodule
 
-
+//JK Flipflop Module
 module jkff(j,k,clk,q,qb);
 	input j,k,clk;
 	output q,qb;
@@ -57,7 +59,7 @@ module jkff(j,k,clk,q,qb);
 	end
 endmodule
 
-
+//Testbench Module
 module tb();
 	reg tmj,tmk,tclk;
 	wire tsq,tsqb;
@@ -74,4 +76,3 @@ module tb();
 		tclk=1; tmj=1; tmk=1; #10;
 	end
 endmodule
-
