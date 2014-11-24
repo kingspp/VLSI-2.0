@@ -31,11 +31,11 @@ endmodule
 module jkff(j,k,clk,q,qb);
 	input j,k,clk;
 	output q,qb;
-	reg q,qb;	
+	reg q,qb;
+	initial q=0;
+	initial qb=~q;
 	always@(posedge clk)
-	begin
-		q=1;
-		qb=~q;
+	begin		
 		if(j==0 & k==0)		
 			q=q;		
 		else if(j==0 & k==1)
