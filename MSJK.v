@@ -4,7 +4,7 @@
 // Engineer: Prathyush S.P
 // 
 // Create Date:    09:09:31 11/24/2014 
-// Design Name: 	 Master Slave JK Flip - Structural Design
+// Design Name:    Master Slave JK Flip - Structural Design
 // Module Name:    msjk 
 // Project Name: 
 // Target Devices: 
