@@ -1,10 +1,10 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
+// Company: 	   Code-Tronix
+// Engineer: 	   Prathyush S.P
 // 
 // Create Date:    09:09:31 11/24/2014 
-// Design Name: 
+// Design Name:    MSJK Flipflop (Structural)
 // Module Name:    msjk 
 // Project Name: 
 // Target Devices: 
