@@ -13,7 +13,7 @@
 //
 // Dependencies: 
 //
-// Revision: 6
+// Revision: 7
 // Revision 0.01 - File Created
 // Additional Comments: 
 //
@@ -27,29 +27,29 @@ module asycd(clk, z,rst);
 	 always@(posedge clk or posedge rst)
 	 begin		
 		if(rst)
-			z0=1'b0;
+			z0=1'b1;
 		else
 			z0=~z0;
 	 end	 
-	 always@(negedge z0 or posedge rst)
+	 always@(posedge z0 or posedge rst)
 	 begin
 		if(rst)
-			z1=1'b0;
+			z1=1'b1;
 		else
 			z1=~z1;
 	 end
-	 always@(negedge z1 or posedge rst)
+	 always@(posedge z1 or posedge rst)
 	 begin
 		if(rst)
-			z2=1'b0;
+			z2=1'b1;
 		else
 			z2=~z2;
 	 end
-	 always@(negedge z2 or posedge rst)
+	 always@(posedge z2 or posedge rst)
 	 begin
 		begin
 		if(rst)
-			z3=1'b0;
+			z3=1'b1;
 		else
 			z3=~z3;
 	 end
